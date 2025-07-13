@@ -1,0 +1,17 @@
+# Nmap 7.95 scan initiated Thu Jul 10 17:19:37 2025 as: /usr/lib/nmap/nmap -T4 -n -sC -sV -Pn -p- -oN fastscan.txt lookup.thm
+Nmap scan report for lookup.thm (10.10.107.29)
+Host is up (0.20s latency).
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 f9:4b:0f:05:40:16:ec:81:53:99:31:94:4d:3b:ec:2c (RSA)
+|   256 66:57:b6:45:4e:14:1b:ae:71:71:98:28:14:2b:bc:59 (ECDSA)
+|_  256 a2:0e:23:8e:e5:17:f7:40:93:ea:52:1b:17:2e:8a:ef (ED25519)
+80/tcp open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Login Page
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jul 10 17:34:09 2025 -- 1 IP address (1 host up) scanned in 871.85 seconds
