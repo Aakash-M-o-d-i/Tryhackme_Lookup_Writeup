@@ -1,4 +1,4 @@
-# 🕵️‍♂️ Lookup | Writeup | 10 July 2025
+# 🕵️‍♂️ Lookup | Writeup | 13 July 2025
 
 <div align="center">
     <img src="./images/THM.png" alt="TryHackMe Logo" width="160%"/>
