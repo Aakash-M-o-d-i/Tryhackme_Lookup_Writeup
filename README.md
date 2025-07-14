@@ -260,13 +260,14 @@ exploit
 
 ## 🛠️ Tools Used
 
-- Nmap
-- Nikto
-- Hydra
-- Burp Suite
-- Netcat (nc)
-- Searchsploit
-- Metasploit
+| Tool | Purpose | Command Example |
+|------|---------|-----------------|
+| Nmap | Port scanning | `nmap -sC -sV -p- target` |
+| Nikto | Web vulnerability scanning | `nikto -h http://target` |
+| Hydra | Credential brute forcing | `hydra -l user -P wordlist target http-post-form` |
+| Burp Suite | Web proxy and intruder | - |
+| Metasploit | Exploitation framework | `use exploit/...` |
+| Searchsploit | Exploit database search | `searchsploit term` |
 
 ---
 
